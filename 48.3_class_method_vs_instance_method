@@ -1,0 +1,46 @@
+
+#Class Method versuse instance Method
+'''
+Class Method Versus Instance Method:
+1.  Class Method is not bound to the object/instance of the class, you can call the class method even if there is no object/instance of that class.
+
+    Instance Method is bound to the object/instance of the class, you cannot call the class method if there is no object/instance of that class
+
+2.  Instance Method operates on an instance and have access to its instance variables.
+
+    Class Method operates on a class as a whole and has no access to a particular instance's variable.
+    Ex: you cannot use any self.a or self.b attributes created by use of special init method in the class method.
+
+3.  Instance Method can modify the object state as well as class state, as it can change both the instance as well as class variables.
+
+    Class Method can modify the class state, it is independent of object state, as it can change only the class variable and not the instance variable, it even cannot use the
+    instance variable in it.
+
+'''
+
+
+
+
+
+
+#Difference between class Method and Static Method
+
+'''
+1. Class Method can access and modify class state, as it takes the class parameter that points to the class and can modify it.
+   Static Method can't access and modify class state, as it does not take any parameter that and can't modify class and instace variables.
+
+2. A class method takes cls as first parameter while a static method needs no specific parameters.
+
+'''
+
+
+
+#Similarity between Class Method and Static Method.
+'''
+1. Class Method and Static Methods are not bound to the object/instance of the class, you can call the class methods or static methods even if there is 
+   no object/instance of that class.
+
+2. In both class method and instance method, you cannot use the instance variables.
+
+
+'''

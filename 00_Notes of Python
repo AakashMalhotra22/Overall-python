@@ -1,0 +1,909 @@
+ 1. Difference between print and return statement in python:
+
+Print Statement:  1.It shows the string of what going inside the function and computer cannot make use of printing statement.
+                  2. Print Statement does not affect computer function.
+                  3. It is very useful to understand how a program works.
+                  4. In this the output cannot be used again.
+                  5. In loops you can use print statment but not return statments.
+                     Examples:
+                     for i in range(0,10):
+                         print(i) # if you here write return i instead of print i then you will get syntax error, as return statement can be used inside the function only.
+
+
+return Statement: 1. It is the main way the function returns value.
+                  2. The value which is returned can be used as an argument and can be passed to another function,
+                     stored as a variable and just can printed for the benefit of users.
+                  3. In this output can be used again
+                  4. In return statement, it gives values to its caller.
+                     for example,
+                     if y is calling a function f(x) as y = f(x)
+                     then in case of return statement, it gives values to the y.
+                  5. return statement can be used only inside the function.
+                  6. difference between return statement and print statement on the basis of loops.
+                     1. Example of Print Statement:
+                        Input
+                        def SQUARE():
+                            n =1
+                            while n<=3:
+                                sq = n*n
+                                print(sq)
+                                n += 1
+
+                        SQUARE()
+                        Output
+                        1
+                        4
+                        9
+
+                     2. Example of return Statement:
+                        Input
+                        def square():
+                           n=1
+                           while n<=3:
+                              sq = n*n
+                              return sq
+                              n+=1
+                        val = square()
+                        print(val)
+                        Output
+                        1
+                        Here return statement has terminated the function after n =1.
+
+
+
+
+2. Sets         1. Sets uses the concept of hash which means it will fetch out the value as fast as possible, no matter which value comes fast or which comes last.
+                  2. Complex cant be converted in to other numeric data types.
+                  3. You cannot sort a list in python which has both types of database, string and int.
+
+
+
+3. Dictionary     1. Dictionary is a mapping of unique and hashable keys to values.
+
+                  2. Dictionaries are mutable and unordered collection of key-value pairs.
+                  x = {"1":2, 10:12, 30:32}
+                  x["1"] = "ram"
+                  print(x)
+                  Output will be {"1": ram, 10:12. 30: 32}
+
+
+4. Hashable      1. Anything that is not mutable is hashable.
+
+
+5. while loop    1. If you are using nested loops, then make sure you use add the intialization in the nested part only.
+                 Example:
+                 i = 1
+                 j =1
+                 while i<=3:
+                    print('aakash ' , end= "")
+                    while j<=3:
+                       print("ram ", end = "")
+                       j+=1
+                    i+=1
+                 This above one is wrong.
+
+                 i = 1
+                 while i<=3:
+                    print('aakash ' , end= "")
+                    j =1
+                    while j<=3:
+                       print("ram ", end = "")
+                       j+=1
+                    i+=1
+
+                  This is right.
+
+
+
+
+
+
+
+
+7. Range:                     1. In case of range command
+                                   for i in range(20, 10, -1)
+                                 The output will be from 20 to 11.
+
+
+8. Modules                   1. In case of modules if you simplify write x%3:
+                                 then the output will be those elements for which x%3 has some values or in simple language will be those elements
+                                 in which x%3 is not zero.
+
+9. Multidimensional array:   1. If you create two rows in an array then they should have same elements, otherwise it will printlist.
+
+
+10. Special variable:         1. __name__
+                              2.  This variable is used when you are importing a module but you dont want to import some of its codes, then we will use the statement:
+                                  if __name__ == "__main__":
+                                     func()
+                              3. if __name__ == "__main__": this code has two different meaning if you run it on a file or if you run it after importing from another file.
+
+
+11. OOP                       1. Everything is object and to create an object, we use a class which consists of attributes(variables) and behavior(Methods or functions).
+                                 Example: for a = 9,
+                                              Here a is an inbuilt object of class int.
+
+                              2. for example, Pen is an object whose class consists of two attributes color and ink concentration and behavior is its concentration is 50 and color
+                                              is blue.
+
+
+12. Decorators                1. If you are calling a function whose input or variable is another function then you have to call the function twice.
+                                 for example
+                                 y = smart(func)
+                                 y(2,3)
+
+
+13. Methods and variable      1. Class method uses class variables.
+                              2. Instance method uses instance variable.
+                              3. Static methods are used where you have do nothing related with an object or any class variable, means in this you need not require class and
+                                 instance variable.
+                                 Example: You want to print something in a class which is not related with any object of the class or any class variable then you will use static
+                                 method.
+
+
+14. Polymorphism              1. This means poly + morph which means many forms
+
+
+15. Operator Overloading      1. When any of the operations such as addition, subtraction or any other is done, then it simply means we are calling method.
+                                 for example:
+                                 2+3
+                                 gives you 5
+                                 but behind the scenes it simply not happened.
+                                 behind the scenes it converts 2+3 in the method
+                                 init.__add___(2,3)
+
+                               2. whenever you use add symbol between two numbers it first converts it into above method init.__add__(a,b) then solve it, but in case of
+                                  objects, this symbols like +,- and many other cannot be used, for this you have to defined these methods in their classes.
+                                  for example here you are adding 2 and 3, where 2 and 3 are objects of in built class int where addition is already defined but in case of two
+                                  objects of your defined class addition is not defined for that you have to define addition in your class.
+
+                               3. Another example:
+                                  a = 9
+                                  print(a)
+                                  here a is an object of string, so when you write print(a), it converts this in the method print(a.__str__()) then prints 9.
+                                  Now in case of object s1 which belongs to the class student when you print s1 it first converts this in s1.__str__() and then prints its
+                                  class name and its location but not its value because
+                                  In case of string, it is an in built class where if you write print(9) it will print 9 as this is in built in it.
+                                  but in case of the class which you have defined if you call its object like print(s1) then it will print only its class name and
+                                  location as you have not defined in it like as defined in inbuilt class string.
+                                  So you have to defined in it
+
+
+
+16. Method Overloading         1. When you use two methods in a class with different number of arguments then it is called method overloading, it is not suppported in python.
+
+                               2. For example you want to calculate the average of numbers provided by the  users, so users is independent of how many numbers he want to give,he
+                                  can ask for average of 2 numbers or 3 numbers or any numbers so in that case, we will use method overloading to creates many methods of name avg
+                                  but with different number of arguments as,
+
+                                  class student:
+                                     def avg(self,a,b):
+                                           return (a+b)/2
+                                     def avg(self,a,b,c):
+                                           return (a+b+c)/3
+
+                                  s1 = student()
+                                  s1.avg(2,3) # in this case it will use first method of class which uses two arguments.
+
+                                  s1.avg(2,3,4) #in this case it will use the second method of class which uses three arguments.
+
+                                 So, this is the use of method overloading, you can create as many as methods of same name with different arguments
+
+                                 But, this is not supported by python, so we will do this by using variable length argument or with some other ways.
+
+17. Method Overrriding       1. In this, two different classes have a method with same name and same arguments, and one class is inherited in other.
+
+                                Use
+                                let we have two class A and B in which B is child class of A or inherits A, and A and B have a method with same name and same number of arguments.
+
+                                class A:
+                                  def
+
+
+
+
+18. Iteration in python     1. fetch one value  at a time from something it can list, string, dict, tuples, etc.
+
+
+19.Iterables and Iterators  1. Iterables are list, dict, tuples, string, sets, range etc.
+                            2. Iterables are the objects which can be iterated over, example: list is a iterable beacause it is a object which can be iterated over.
+                            3. Iterables are capable of creating its own iterator and this created iterator is going to do iteration on itself.
+                               For example:
+                               List is capable of creating its own iterator and this created iterator is going to do the iteration on the list itself.
+
+                           4.  A datatype in python is said to be iterable, if it is capable of creating its own iterator.
+                               Example:
+                               list, tuples, dict, sets, string are capable of creating their own iterators.
+                               Input
+                               for i in "ram":
+                                 print(i)
+                               Output
+                               r
+                               a
+                               m
+                               while int, float bool are not capable of creating their own iterators.
+                               Input
+                               for i in 2:
+                                print(i)
+                               Output
+                               Error, int object is not iterable
+
+                           5.  Iterable has the iter method that's __iter__()
+
+                           6.  Iterator is the object which are created on calling the iter methods in iterables.
+                               Examples:
+                               l = [1,2,3,4]
+                               then
+                               y = iter(l)
+                               Here y is an iterator which is obtained by calling the iter method in iterable list l.
+
+                           7.  Iterators have the ability to go through each element in an iterable, one by one.
+                               for example:
+                               l = [1,2,3,4]
+                               then the iterator of l has the abiltiy to go through each element of l one by one.
+
+                           8.  Iterators must have the next method; that is their trademark.
+
+                           9.  Application of iterators is for loops,
+                               Example:
+                               Input
+                               l = [1,2,3,4]
+                               for i in l:
+                                  print(i)
+
+                               Output
+                               1
+                               2
+                               3
+                               4
+                               Behind the scenes, first this list is creating its iterator, that iterator is continuously calling the next method till the list gets exhausted.
+
+                           10. Errors related to iterables:
+                               1. 'int' object is not iterable
+                               2. 'bool' object is not iterable
+                               3. 'float' object is not iterable
+
+                           11. Errors related to iterators:
+                               1. 'list' object is not an iterator
+                               2. 'dict' object is not an iterator
+
+
+
+20. raise StopIteration    1. If you want to stop the iteration at a particular point in if, ellif and else statement then you can write raise StopIteration.
+                           2. It is similar as break in a for loop.
+                              As break stops the loops, as that point reaches after which loop is not defined.
+                              Similarly, raise StopIteration will stop your loop in else, elif and else statement, as soon as that point reaches.
+
+
+
+
+
+21. Empty class             1. To create an empty class use pass.
+                               Example
+                               def car:
+                                   pass
+
+
+
+22. Generators             1. These are used to create the iterators without using iter and next method.
+                           2. They uses yield which converts the function in to the iterators.
+                           3. Application:
+                              If you have a thousands of data and you will not return all the data, you would rather perfer to fetch the value one by one.
+                           4. In case of generator if we write print(val) we do get only class name and address not the value because generators do not hold entire result in memory,
+                              they yield one result at a time, so we have to ask for the next result.
+
+                           5. Consider the example:
+                                def SQUARE():
+                                    n =1
+                                    while n<=3:
+                                        sq = n*n
+                                        yield   (sq)
+                                        n+=1
+
+                                val = SQUARE()
+                                print(val.__next__())# This will give 1
+                                print(val.__next__()) # This will give 4
+                                print(val.__next__()) # This will give 9
+                                print(val.__next__()) # This will give an error of StopItertion
+
+                            6. Generators improves the performance as they don't store data in the memory they fetch values one by one, but if you return all the values then it will
+                               use data in the memory and affect the performance.
+
+                            7. Generators can be created by use of list comprehension as,
+                               y = (x*x for x in [1,2,3,4])
+                               print(next(y))
+
+                            8. If you want to create the list of generators then write,
+                               y = (x*x for x in [1,2,3,4])
+                               print(list(y))
+
+
+
+25. List comprehension     1. nums = [x*x for x in[1,2,3,4,5]]
+                              print(nums)
+
+
+26. Comments               1. You can write comments in python by two ways
+                               1. #
+                               2. ''''''
+                               Don't use triple quotes for comments in python because they are also used in creating documentation, so use only # for comments.
+
+
+27. Interpreter           1. It is a program that translates each of the instructions immediately one by one.
+                              Example:
+                              I have written these codes in my language
+                              1. Open computer
+                              2. Go to desktop
+                              Then if interpreter executes this, then it will execute first line open computer, convert it into machine language then computer will open itself.
+                              Then it will read second code, convert it into machine language and then computer go to desktop.
+
+                           Properties:
+                           1. It is a slow process, as mechanic has to wait while each instruction is being translated.
+                           2. It provides you the chance to correct your mistake as you move along, for example, there are two desktops in your computer, then mechanic will stuck
+                              which one to open, then at that moment you can correct that code.
+                           3. It runs slowly, starts right away and let you see results.
+
+
+28. Compiler            1. It takes your code, get that code converted in machine language and then gives you the output all at one time.
+                        2. It takes extra preparation time.
+                        3. Runs very quickly.
+
+
+
+
+
+
+
+
+
+29 Differennce between ,(comma) and +(plus) in string: 1. Comma produces a space in output while plus doesnot produce a space.
+                                                       For example,
+                                                       Consider the input,
+                                                      
+                                                      1. print("1",3*'#')                                         
+                                                      2. print("1"+3*'#')
+                                                      3. print(0*"#",3*'#')
+                                                     4. print(0*'#'+3*'#')
+
+                                                      Output are:
+
+                                                      1.1 ###
+                                                      2.1###
+                                                      3. ###
+                                                      4.###
+
+
+
+
+30. Data types of python     1.int, float, bool, string, list, dict, tup, set,
+
+
+31. Rules for variable names:   1. Names can not start with number.
+                                2. Should not have space in between, use _ instead.
+                                3. Don't use those symbols which have other use in python.
+                                4. Always write the names in lowercase.
+                                5. Avoid using those words which have special meaning in python.
+
+
+31. Points about python language
+                                     1.Python uses Dynamic Typing which means use can reassign variables to different data types.
+                                       Use of Dynamic typing:
+                                       1. It makes python very flexible in assigning data types.
+
+                                       2. Python is not "Statically-Typed(Opposite of Dynamic Typed)" language.
+                                     Pros of Dynamic Typing
+                                     1. Very easy with work with
+                                     2. It makes your code readable.
+
+                                     Cons of Dynamic Typing:
+                                     1. May result in bugs for unexpected data types.
+                                     2. You need to be aware of type().
+                                        Example you want to add two numbers and the user will put the input, then make sure it puts int in it, not string in the input.
+                                        print("2"+"3")
+                                        output is 23
+
+
+
+
+32. Strings in Python              1. Strings are ordered sequences which means we can use indexing and slicing to grab  sub-sections of the string.
+
+                                      Indexing:
+                                      1. Indexing notation uses [] notation after string.
+                                      2. Indexing allows you to grab a single character from the string.
+                                      3. Indexing Starts from 0.
+
+                                      Slicing:
+                                      1. It allows you to grab a subsection of multiple characters of the string.
+                                      2. It has following syntax.
+                                         [start:stop:step]
+                                         a. start is a numerical index for the slice start.
+                                         b. stop is the index you will go up to (but not include)
+                                         c. Step is the size of the "jump" you take.
+
+                                         Application of slicing:
+                                         1. Reverse a sting:
+                                            print(x[::-1]# it starts from the last letter of string and go in reverse direction.
+
+                                         2. consider x = "aakashwani"
+                                            print(x[2:8:2]) # It starts from the 2nd index letter(k) till the 7th index(a) letter with a jump of 1 letters in between.
+                                            Output will be = ksw
+
+
+                                      Escape sequence:
+                                      1. \n - It will take the phrase followed by this in the next line.
+                                      2. \t - It will provide a big space between the two words in which it is used.
+
+                                      Properties of string:
+                                      1. Strings are immutable which means cannot be changed, string does not support item assignment.
+                                      2. If you want to do item assignment, then use item concatenation.
+
+                                      Built in Methods of strings
+                                      1. write string followed by comma and you will get all the functions/methods
+                                         if x is the name of string.
+                                         x.upper()
+                                         then all the letter will be in upper case.
+
+                                         Here upper()is a function, and upper is variable.
+                                         so if you write x.upper then it will not make the letter in uppercase, as you have not called the function.
+
+                                       2. split method or function.
+                                          1. It will convert the string in a list by seprating through comma by default.
+                                          For example:
+                                          x = "My name is aakash"
+
+                                          Now consider following inputs.
+                                          print(x.split())
+                                          Output is ["My", "name", "is", "aakash"]
+
+                                          print(x.split("a") # Now it will split through "a".
+                                          output ['My n', 'me is ', '', 'k', 'sh']
+
+
+                                      String formatting
+                                      String Interpolation - There are multiple ways to format strings for printing variables in them, this is known as string Interpolation.
+
+                                      Two methods of string Interpolation:
+                                      1. .format() Method
+                                      2. f-strings Method (new method)
+
+                                      Formula for float formatting
+                                      {value:width,.precisionf}
+                                      Here width is for the length of the number if you have entered like 100, and write 2 in width then it will print 100 only, but if you write
+                                      4 in width and entered 100, then it will print a space followed by 100, if you write 04 in width and entered 100 then it will print 0100
+
+                                      Here comma(,) is used for representation of big numbers by use of comma, like if you have written 1000000, then it will print 10,00,000.
+
+                                      Here precisionf is used to add floating values in the end, like if write .2f in precision and entered number 100 then it will return 100.00
+                                      or if you write .2f in precision and entered number 100.2182131 then it will round off to print 100.22.
+
+                                      Ex:
+                                      1. print("{:2,.2f}".format(100))
+                                         Output is 100.00
+                                      2. print("{:2,.2f}".format(1000000))
+                                         Output is 10,00,000.00
+                                       3. print("{:05,.2f}".format(9))
+                                         Output is 09.00
+                                      3. print("{:10,.2f}".format(9))
+                                         Output is 6 space followed by 9.00
+
+                                      4. print("{:2,.2f}".format(9.213212))
+                                         Output is 9.21
+
+                                      You can also use any of them, no need to use all of them if not required.
+                                      5. print("{.2f}".format(9.213212))
+                                         Output is 9.21
+                                      6. print("{:,}".format(90000000))
+                                         Output is 9,00,00,000
+                                      7. print("{:02}".format(9))
+                                         Output is 09
+
+
+
+
+
+
+33. List:                                               1. List are the ordered sequence that can hold variety of object types.
+                                                        2. They used [] brackets and commas to separate objects in the list.
+                                                        3. They are mutable unlike strings.
+                                                        4. You can add two list as like this,
+                                                           Input= [10,1]+[2]
+                                                           output will be [10,1,2]
+
+
+34. None:                                               1. None is a data type of python.
+                                                        2. None is a keyword is used to define null value, or no value.
+                                                        3. None is not same as 0, False, or an empty string.
+                                                        4. The function without a return statement is known as void functions return None from the functions.
+                                                        5. In None, first letter is always capital that's N.
+                                                        6. If there is no return statement in a function, but it takes a parameter, and if you provide the parameter to the function
+                                                           without return statement, then it will execute the codes which are return in the function to the parameter which you have
+                                                           provided but because of absence of return statement, the output would be None which means no value
+
+                                                           For example:
+                                                           Consider the list:
+                                                           l = [4,3,2,1]
+                                                           print(l.sort())
+                                                           Here sort function has no return statement, so here the output would be None, behind the scenes, the sort function has
+                                                           made the list sorted but couldn't return the sorted list, because of absence of return statement.
+                                                           Now, if you just write,
+                                                           print(l)
+                                                           then the output is [1,2,3,4] that's is sorted list, because the list was sorted by the function sort().
+
+                                                        7. Make sure when you use a function without return statement, then fist call the function then just print the parameter by
+                                                           use of print statement which you have passed in the function.
+                                                           For example:
+                                                           l = [2,1]
+                                                           l.sort()
+                                                           print(l)
+                                                           output is [1,2]
+                                                         8. None keyword is an object, and it is a data type of the class None Type.
+
+                                                         9. Difference between None and Zero and empty strings in python.
+                                                            1. None means no value or null
+                                                            2. Zero does not mean no value, it means False.
+                                                            3. empty string also indicates false.
+
+                                                         10. None keyword can be used as a placeholder for an object that we don't want to assign now.
+                                                             Ex:
+                                                             b = None
+                                                             This means there exists a variable b with no value.
+
+
+
+35. Difference between Dictionaries and list:            1.  Dictionaries:
+
+                                                             1. Here the objects are retrieved by the key name, not by the index numbers, which means you need to remember the index
+                                                                number.
+                                                             2. These are unordered, and can't be sorted, indexed and sliced.
+
+                                                         2. List:
+                                                             1. Objects retrieved by location or index.
+                                                             2. Ordered sequence can be indexed or sliced.
+
+
+
+
+
+
+
+
+
+36. Tuples:                                               1. Support indexing and slicing.
+                                                          2. Have two basic inbuilt methods.
+                                                             1. count, Index
+                                                          3. You can use len also.
+                                                          4. It doesn't support mutability unlike list and like dictionaries.
+                                                          5. Tuples are used when you are passing objects in your program and you need to make sure that they don't change accidentally
+
+
+37. Sets                                                  1. Sets are unordered collections of unique elements.
+                                                          2. In this, no element can repeat more than one time.
+                                                          3. when you print the output of the set, then it may not print the same order as in input.
+                                                             Ex:
+                                                             s= {1,2,3,5,24323,3,2}
+                                                             print(s)
+                                                             The output may not have the same order as in input.
+                                                          4. Two ways to create sets.
+                                                             First: r = {1,2,4}
+                                                             Second: l = set(), in this you can pass list.
+                                                             ex : r2 = [1,2,4]
+                                                             l = set(r2)
+                                                             print(l)
+                                                             output is {1,2,4}
+
+
+                                                          5. You can use add method to add values in set like
+                                                             s = {}
+                                                             s.add(1)
+                                                             print(s)
+                                                             s = {1}
+
+                                                           6. Convert string, list, dict and tuples in sets:
+                                                              Ex:
+                                                              y = "are"
+                                                              print(set(y)
+                                                              output = {'a','r','e'}
+
+
+38. Bool:                                                  1. It means True or False.
+                                                              Ex:
+                                                              print(1==1)
+                                                              output is True
+
+
+
+
+39. Ordered sequences:                             It means you can fetch the value through its index.
+
+
+
+40. global variable:                               You cannot set parameter as global variable:
+                                                   Ex:
+                                                   a = 9
+                                                   def hi(a)
+                                                     global a # This is wrong as a is parameter so you cannnot change it's value.
+                                                     a = 7
+                                                     print(a)
+                                                   hi(a)
+
+
+41. bugs:                   The errors in the code are called buds.
+
+42. debug:                  This is the way to find the bugs in the code and correct them.
+
+
+43. Points about python language
+                                     1.Python uses Dynamic Typing which means use can reassign variables to different data types.
+                                       Use of Dynamic typing:
+                                       1. It makes python very flexible in assigning data types.
+
+                                       2. Python is not "Statically-Typed(Opposite of Dynamic Typed)" language.
+                                     Pros of Dynamic Typing
+                                     1. Very easy with work with
+                                     2. It makes your code readable.
+
+                                     Cons of Dynamic Typing:
+                                     1. May result in bugs for unexpected data types.
+                                     2. You need to be aware of type().
+                                        Example you want to add two numbers and the user will put the input, then make sure it puts int in it, not string in the input.
+                                        print("2"+"3")
+                                        output is 23
+
+44. Data types of python              1.int, float, bool, string, list, dict, tup, set,None
+
+
+
+
+
+45. Ordered sequences:                  It means you can fetch the value through its index.
+
+
+46. Differennce between ,(comma) and +(plus) in string:     1. Comma produces a space in output while plus doesnot produce a space.
+                                                              For example,
+                                                              Consider the input,
+
+                                                               1. print("1",3*'#')
+                                                               2. print("1"+3*'#')
+                                                               3. print(0*"#",3*'#')
+                                                               4. print(0*'#'+3*'#')
+
+                                                               Output are:
+
+                                                               1.1 ###
+                                                               2.1###
+                                                               3. ###
+                                                               4.###
+
+
+
+47. Rules for variable names:         1. Names can not start with number.
+                                     2. Should not have space in between, use _ instead.
+                                     3. Don't use those symbols which have other use in python.
+                                     4. Always write the names in lowercase.
+                                     5. Avoid using those words which have special meaning in python.
+
+48. Strings in Python                 1. Strings are ordered sequences which means we can use indexing and slicing to grab  sub-sections of the string.
+
+                                        Indexing:
+                                        1. Indexing notation uses [] notation after string.
+                                        2. Indexing allows you to grab a single character from the string.
+                                        3. Indexing Starts from 0.
+
+                                        Slicing:
+                                        1. It allows you to grab a subsection of multiple characters of the string.
+                                        2. It has following syntax.
+                                           [start:stop:step]
+                                            a. start is a numerical index for the slice start.
+                                            b. stop is the index you will go up to (but not include)
+                                            c. Step is the size of the "jump" you take.
+
+                                           Application of slicing:
+                                           1. Reverse a sting:
+                                              print(x[::-1]# it starts from the last letter of string and go in reverse direction.
+
+                                           2. consider x = "aakashwani"
+                                              print(x[2:8:2]) # It starts from the 2nd index letter(k) till the 7th index(a) letter with a jump of 1 letters in between.
+                                              Output will be = ksw
+
+
+                                       Escape sequence:
+                                       1. \n - It will take the phrase followed by this in the next line.
+                                       2. \t - It will provide a big space between the two words in which it is used.
+
+                                       Properties of string:
+                                       1. Strings are immutable which means cannot be changed, string does not support item assignment.
+                                       2. If you want to do item assignment, then use item concatenation.
+
+                                       Built in Methods of strings
+                                       1. write string followed by comma and you will get all the functions/methods
+                                         if x is the name of string.
+                                         x.upper()
+                                         then all the letter will be in upper case.
+
+                                         Here upper()is a function, and upper is variable.
+                                         so if you write x.upper then it will not make the letter in uppercase, as you have not called the function.
+
+                                       2. split method or function.
+                                          1. It will convert the string in a list by seprating through comma by default.
+                                          For example:
+                                          x = "My name is aakash"
+
+                                          Now consider following inputs.
+                                          print(x.split())
+                                          Output is ["My", "name", "is", "aakash"]
+
+                                          print(x.split("a") # Now it will split through "a".
+                                          output ['My n', 'me is ', '', 'k', 'sh']
+
+
+                                      String formatting
+                                      String Interpolation - There are multiple ways to format strings for printing variables in them, this is known as string Interpolation.
+
+                                      Two methods of string Interpolation:
+                                      1. .format() Method
+                                      2. f-strings Method (new method)
+
+                                      Formula for float formatting
+                                      {value:width,.precisionf}
+                                      Here width is for the length of the number if you have entered like 100, and write 2 in width then it will print 100 only, but if you write
+                                      4 in width and entered 100, then it will print a space followed by 100, if you write 04 in width and entered 100 then it will print 0100
+
+                                      Here comma(,) is used for representation of big numbers by use of comma, like if you have written 1000000, then it will print 10,00,000.
+
+                                      Here precisionf is used to add floating values in the end, like if write .2f in precision and entered number 100 then it will return 100.00
+                                      or if you write .2f in precision and entered number 100.2182131 then it will round off to print 100.22.
+
+                                      Ex:
+                                      1. print("{:2,.2f}".format(100))
+                                         Output is 100.00
+                                      2. print("{:2,.2f}".format(1000000))
+                                         Output is 10,00,000.00
+                                       3. print("{:05,.2f}".format(9))
+                                         Output is 09.00
+                                      3. print("{:10,.2f}".format(9))
+                                         Output is 6 space followed by 9.00
+
+                                      4. print("{:2,.2f}".format(9.213212))
+                                         Output is 9.21
+
+                                      You can also use any of them, no need to use all of them if not required.
+                                      5. print("{.2f}".format(9.213212))
+                                         Output is 9.21
+                                      6. print("{:,}".format(90000000))
+                                         Output is 9,00,00,000
+                                      7. print("{:02}".format(9))
+                                         Output is 09
+
+
+
+
+49. List:                                                1. List are the ordered sequence that can hold variety of object types.
+                                                        2. They used [] brackets and commas to separate objects in the list.
+                                                        3. They are mutable unlike strings.
+                                                        4. You can add two list as like this,
+                                                           Input= [10,1]+[2]
+                                                           output will be [10,1,2]
+
+
+
+50. Dictionary                                           1. Dictionary is a mapping of unique and hashable keys to values.
+                                                        2. Dictionaries are mutable and unordered collection of key-value pairs.
+                                                           x = {"1":2, 10:12, 30:32}
+                                                           x["1"] = "ram"
+                                                           print(x)
+                                                           Output will be {"1": ram, 10:12. 30: 32}
+                                                        3. Here the objects are retrieved by the key name, not by the index numbers, which means you need to remember the index
+                                                                number.
+                                                        4. These are unordered, and can't be sorted, indexed and sliced.
+
+
+
+
+51. Key Error                                            1. It means key does not exist.
+                                                        2. Python raises this error whenever a dict() object is requested (using the format a = dict[key])
+                                                           and the key is not in the dict.
+                                                        3. It generally means you have put the wrong key which does not exist and now python cannot get the value
+                                                           for that key from the dictionary.
+                                                           Example:
+                                                           a = {"name": "ram"}
+                                                           print(a[0]) and since 0 is not a key in the dictionary so it will give key word error.
+
+                                                        4. key word error means or comes when you try to call a dictionary object using a key which does not exist.
+
+
+
+
+
+52. Tuples:                                                1. Support indexing and slicing.
+                                                          2. Have two basic inbuilt methods.
+                                                             1. count, Index
+                                                          3. You can use len also.
+                                                          4. It doesn't support mutability unlike list and like dictionaries.
+                                                          5. Tuples are used when you are passing objects in your program and you need to make sure that they don't change accidentally
+
+
+53. Sets                                                  1. Sets are unordered collections of unique elements.
+                                                          2. In this, no element can repeat more than one time.
+                                                          3. when you print the output of the set, then it may not print the same order as in input.
+                                                             Ex:
+                                                             s= {1,2,3,5,24323,3,2}
+                                                             print(s)
+                                                             The output may not have the same order as in input.
+                                                          4. Two ways to create sets.
+                                                             First: r = {1,2,4}
+                                                             Second: l = set(), in this you can pass list.
+                                                             ex : r2 = [1,2,4]
+                                                             l = set(r2)
+                                                             print(l)
+                                                             output is {1,2,4}
+
+
+                                                          5. You can use add method to add values in set like
+                                                             s = {}
+                                                             s.add(1)
+                                                             print(s)
+                                                             s = {1}
+
+                                                           6. Convert string, list, dict and tuples in sets:
+                                                              Ex:
+                                                              y = "are"
+                                                              print(set(y)
+                                                              output = {'a','r','e'}
+
+
+
+
+
+54. Bool:                                                  1. It means True or False.
+                                                              Ex:
+                                                              print(1==1)
+                                                              output is True
+
+
+55. None:                                               1. None is a data type of python.
+                                                        2. None is a keyword is used to define null value, or no value.
+                                                        3. None is not same as 0, False, or an empty string.
+                                                        4. The function without a return statement is known as void functions return None from the functions.
+                                                        5. In None, first letter is always capital that's N.
+                                                        6. If there is no return statement in a function, but it takes a parameter, and if you provide the parameter to the function
+                                                           without return statement, then it will execute the codes which are return in the function to the parameter which you have
+                                                           provided but because of absence of return statement, the output would be None which means no value
+
+                                                           For example:
+                                                           Consider the list:
+                                                           l = [4,3,2,1]
+                                                           print(l.sort())
+                                                           Here sort function has no return statement, so here the output would be None, behind the scenes, the sort function has
+                                                           made the list sorted but couldn't return the sorted list, because of absence of return statement.
+                                                           Now, if you just write,
+                                                           print(l)
+                                                           then the output is [1,2,3,4] that's is sorted list, because the list was sorted by the function sort().
+
+                                                        7. Make sure when you use a function without return statement, then fist call the function then just print the parameter by
+                                                           use of print statement which you have passed in the function.
+                                                           For example:
+                                                           l = [2,1]
+                                                           l.sort()
+                                                           print(l)
+                                                           output is [1,2]
+                                                         8. None keyword is an object, and it is a data type of the class None Type.
+
+                                                         9. Difference between None and Zero and empty strings in python.
+                                                            1. None means no value or null
+                                                            2. Zero does not mean no value, it means False.
+                                                            3. empty string also indicates false.
+
+                                                         10. None keyword can be used as a placeholder for an object that we don't want to assign now.
+                                                             Ex:
+                                                             b = None
+                                                             This means there exists a variable b with no value.
+
+
+
+56                                        1. when you want to pass the function as a input in other function, then no need to use the parenthesis
+                                             Example
+                                             let f1 is a function and you want to pass f1 function in f2 function then write
+                                             y = f2(f1)
+                                             No need to write like this y =f2(f1()) WRONG WRONG
+
+                                          2. Parenthesis in a function is used when you want to execute it.

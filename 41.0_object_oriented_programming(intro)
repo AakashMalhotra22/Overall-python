@@ -1,0 +1,84 @@
+Object Oriented Programming:
+1. Object oriented programming allows to create objects that have attributes(variables) and behavior(methods or functions).
+2. Objects are created by use of class
+3. class consist of the attributes(variables) and methods(functions/behavior).
+   a. Functions created in a class are called methods, though both functions and methods are same but the slight difference is functions created in a class are called methods
+ Examples:
+ y = "ram"
+ Here y is an object of class str, and this object has attributes and methods such as .split() method, .strip() method.
+ This str class is in built class.
+
+ Now as like string, we can create our own class and in this can add our own attributes and methods.
+
+
+
+4. syntax
+   class NameOfClass: or class NameofClass(): here parenthesis are not required, it all depends on you, it would not create a difference and also write the name of class captilized.
+
+       def __init__(self, parame1, param2);
+          self.param1 = param1
+          self.param2 = param2
+          self.c = param1
+         [[[This is called init method, by the help of this you can take parameters from the user when it is creating the object of this class, you can take as much as you want
+         parameters from the user and inside this class you can give those parameters same or different name to create attributes(variables)
+         As in above i have asked for two parameters, param1 and param2 and now i created three attributes(variables) inside this class self.param1 which has value equals to
+         param 1 which user will provide us and so on self.param2 = param2 and self.c = param1
+
+         Now consider user creates the object of this class as,
+         y = NameOfClass(3,4)
+         then automatically in this class, three attributes(variables) would be created whose name are param1, param2 and c.
+
+         Now use of self before these attributes and in the init method is:
+         this class can have as many sas objects and each object will have different parameters values( like y1 = NameofClass(3,4). y2 = NameOfClass(5,3) and so on)
+         Now, this self ensures that for all the objects created of this class, the attributes inside the class will have value which are provided to that object only.
+         if we have objects y1 = NameofClass(3,4). y2 = NameOfClass(5,3)
+         Now in case y1, self.param1 =3, self.param2 =4 and self.c =3 which means y1.param1 = 3, y1.param2 =4 and y1.c = 3, This means when you are using y1 object then the
+         value of param1 and param2 and c is 3,4,3
+         Now in case y2, self.param1 =5, self.param2 =3 and self.c =5 which means y2.param1 = 3, y2.param2 =4 and y2.c = 3, This means when you are using y2 object then the
+         value of param1 and param2 and c is 5,3,5]]]
+
+         def add(self,e,f)
+           self.e = e
+           print(e+d)
+
+          [[Now what happens here is I have created a add method in this class which takes two parameters c and d and this will be taken at the time when you use it.
+          Example
+          y1 == NameofClass(3,7)
+          y1.add(3,4)# here the e=3 and f =4
+          Now I have only write created one attribute only that's self.e =3,
+          Notice that if this e becomes one of the attribute of this class which i can use anywhere in this class like, c, param1, param2 but f is not an attribute of the class,
+          the f can be used only inside this function add only]
+
+       def sub(self, r)
+          print(r-self.e)
+          [[[Now i created one more function inside the class which subtracts e from r, we would able to e here becomes e is a attribute of this class, here we cannot use f,
+            because f is not attribute of this class.
+            Now to use it
+            y1 = NameOfClass(3,5)
+            y1.add(10,100)# output is 110
+            y1.sub(20) # output is 10 which is obtained by this 20-10 =10]
+
+       def __len__(self):
+            return self.param1
+            This is also a way to create a method.
+            These are in built options provided while making the class, such as add, sub, len and so on.
+
+
+       #Now to explain
+        Let us make two object one of class list and one of class NameOfClass
+        y = [1,2,3]# here we can pass as many as parameters lets pass only 3 parameters
+        x = NameOfClass(100,200)# here we can only pass two parameters
+
+        # calling attribute
+          print(y[0]) output is 1
+          print(x.a) output is 100
+
+        # calling methods
+          print(y.pop()) output is 3
+          print(x.add(2,3)) output is 5
+
+       # calling other method
+           print(len(y)) output is 3
+           print(len(x)) output is 100
+
+
